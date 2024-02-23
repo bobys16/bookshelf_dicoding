@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookshelf Apps</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">Bookshelf Apps</div>
+</nav>
+
+<div class="book-counter">
+  <h2>Book Counter</h2>
+  <p>Total Books: <span id="total-books">0</span></p>
+  <p>Read Books: <span id="read-books">0</span></p>
+  <p>Unread Books: <span id="unread-books">0</span></p>
+</div>
+
+<form id="add-book-form">
+  <label for="title">Judul:</label>
+  <input type="text" id="title" required>
+  <label for="author">Penulis:</label>
+  <input type="text" id="author" required>
+  <label for="year">Tahun:</label>
+  <input type="number" id="year" required>
+  <label for="status">Status:</label>
+  <select id="status" required>
+    <option value="false">Belum selesai dibaca</option>
+    <option value="true">Selesai dibaca</option>
+  </select>
+  <button type="submit">Tambah Buku</button>
+</form>
+
+<form id="search-book-form">
+  <label for="search-title">Cari Judul Buku:</label>
+  <input type="text" id="search-title" required>
+  <button type="submit">Cari</button>
+  <div class="search" id="search-result">
+    <h2>Hasil Pencarian</h2>
+  </div>
+</form>
+
+<div id="deleteModal" class="modal">
+  <div class="modal-content">
+    <p>Are you sure you want to delete this book?</p>
+    <button id="confirmDelete">Delete</button>
+    <button id="cancelDelete">Cancel</button>
+  </div>
+</div>
+
+<div class="bookshelf">
+  <div class="shelf" id="unfinished-shelf">
+    <h2>Belum selesai dibaca</h2>
+  </div>
+  <div class="shelf" id="finished-shelf">
+    <h2>Selesai dibaca</h2>
+  </div>
+</div>
+
+<footer class="footer">
+  Made with &lt;3 by Bondan
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
